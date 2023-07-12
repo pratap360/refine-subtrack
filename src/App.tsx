@@ -1,4 +1,4 @@
-import { Refine, WelcomePage } from "@refinedev/core";
+import { Refine } from "@refinedev/core";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
 import { notificationProvider, RefineSnackbarProvider } from "@refinedev/mui";
@@ -14,11 +14,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { supabaseClient } from "utility";
 import authProvider from "./authProvider";
 import { ColorModeContextProvider } from "./contexts/color-mode";
+import Home from "./Home";
+import Signup from "./Signup";
+import NotFound from "./NotFound";
+
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <GitHubBanner /> */}
       <RefineKbarProvider>
         <ColorModeContextProvider>
           <CssBaseline />
@@ -36,9 +39,19 @@ function App() {
                 liveMode: "auto",
               }}
             >
+              {/* home or landing page  */}
               <Routes>
-                <Route index element={<WelcomePage />} />
+                <Route path="/"index element={<Home/>}/>
               </Routes>
+              {/* Sign up page  */}
+              <Routes>
+              <Route path="/Signup" element={<Signup/>} />
+              </Routes>
+              {/* 404 not found  */}
+              <Routes>
+              <Route path="/404Error-NotFound" element={<NotFound/>} />
+              </Routes>
+
               <RefineKbar />
               <UnsavedChangesNotifier />
               <DocumentTitleHandler />
