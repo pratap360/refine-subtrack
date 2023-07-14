@@ -12,11 +12,12 @@ import routerBindings, {
 import { dataProvider, liveProvider } from "@refinedev/supabase";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { supabaseClient } from "utility";
-import authProvider from "./authProvider";
 import { ColorModeContextProvider } from "./contexts/color-mode";
 import Home from "./Home";
 import Signup from "./Signup";
 import NotFound from "./NotFound";
+import authProvider from "./authProvider";
+import Dashboard from "pages/dashboard";
 
 
 function App() {
@@ -43,10 +44,17 @@ function App() {
               <Routes>
                 <Route path="/"index element={<Home/>}/>
               </Routes>
+
               {/* Sign up page  */}
               <Routes>
               <Route path="/Signup" element={<Signup/>} />
               </Routes>
+
+              {/* Dashboard  */}
+              <Routes>
+                <Route path="/dashboard" element={<Dashboard/>} />
+              </Routes>
+
               {/* 404 not found  */}
               <Routes>
               <Route path="/404Error-NotFound" element={<NotFound/>} />
