@@ -18,6 +18,9 @@ import Signup from "./Signup";
 import NotFound from "./NotFound";
 import authProvider from "./authProvider";
 import Dashboard from "pages/dashboard";
+import Login from "Login";
+import ForgotPwd from "forgotpwd";
+
 
 
 function App() {
@@ -47,8 +50,18 @@ function App() {
 
               {/* Sign up page  */}
               <Routes>
-              <Route path="/Signup" element={<Signup/>} />
+              <Route path="/signup" element={<Signup/>} />
               </Routes>
+              {/* login page  */}
+              <Routes>
+              <Route path="/login" element={<Login/>} />
+              </Routes>
+
+              {/* forgot pwd page  */}
+              <Routes>
+              <Route path="/forgotpassword" element={<ForgotPwd/>} />
+              </Routes>
+       
 
               {/* Dashboard  */}
               <Routes>
@@ -57,7 +70,7 @@ function App() {
 
               {/* 404 not found  */}
               <Routes>
-              <Route path="/404Error-NotFound" element={<NotFound/>} />
+              <Route path="/404NotFound" element={<NotFound/>} />
               </Routes>
 
               <RefineKbar />
