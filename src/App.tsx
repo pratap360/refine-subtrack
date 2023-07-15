@@ -20,8 +20,29 @@ import authProvider from "./authProvider";
 import Dashboard from "pages/dashboard";
 import Login from "Login";
 import ForgotPwd from "forgotpwd";
+import { ThemeProvider } from "@emotion/react";
+import { createTheme } from "@mui/material";
+import { deepPurple } from "@mui/material/colors";
 
 
+
+// subtrack custom theme 
+const subtrackTheme = createTheme({
+  palette: {
+      primary: {
+        main: deepPurple[500],
+      },
+      secondary:{
+          main:deepPurple[300], 
+      }
+    },
+    typography:{
+      fontFamily:`'Roboto','Jockey One','sans-serif'`,
+      fontWeightLight: 300,
+      fontWeightRegular: 400,
+    },
+
+  });
 
 function App() {
   return (
@@ -43,6 +64,8 @@ function App() {
                 liveMode: "auto",
               }}
             >
+              <ThemeProvider theme={subtrackTheme}>
+
               {/* home or landing page  */}
               <Routes>
                 <Route path="/"index element={<Home/>}/>
@@ -72,6 +95,7 @@ function App() {
               <Routes>
               <Route path="/404NotFound" element={<NotFound/>} />
               </Routes>
+              </ThemeProvider>
 
               <RefineKbar />
               <UnsavedChangesNotifier />
