@@ -74,7 +74,7 @@ export default function LandingPage() {
                         <Button
                             variant="contained"
                             component={Link}
-                            to="/requests"
+                            to="/dashboard"
                             size="small"
                         >
                             Dashboard
@@ -92,7 +92,7 @@ export default function LandingPage() {
                             <Button
                                 variant="contained"
                                 component={Link}
-                                to="/register"
+                                to="/Signup"
                                 size="small"
                             >
                                 Create Account
@@ -115,7 +115,7 @@ export default function LandingPage() {
                                 md: "3.75rem",
                             }}
                         >
-                            Quick Online RSVP Creation and Management
+                            Your Personal Subcription Tracker
                         </Typography>
                         <Typography
                             variant="subtitle1"
@@ -125,16 +125,16 @@ export default function LandingPage() {
                                 md: "1.25rem",
                             }}
                         >
-                            Create customizable RSVP quickly and send them online. No more
-                            manually counting cards. Easily determine number of attendees.
+                            Create customizable Subcription Tracker at one place for your all the
+                            subscription out there.
                         </Typography>
                         <Box display="flex" justifyContent="center" mt={4}>
                             {user ? (
-                                <Button variant="contained" component={Link} to="/requests">
+                                <Button variant="contained" component={Link} to="/dashboard">
                                     Dashboard
                                 </Button>
                             ) : (
-                                <Button variant="contained" component={Link} to="/requests">
+                                <Button variant="contained" component={Link} to="/login">
                                     Get Started.
                                 </Button>
                             )}
@@ -143,7 +143,7 @@ export default function LandingPage() {
                 </Box>
                 <Box bgcolor="primary.main">
                     <Box px={{ xs: 2, md: 10 }} maxWidth={1280} mx="auto">
-                        <img src="/hero.png" style={{ width: "100%", marginTop: "-20%" }} />
+                        <img src="/ss_hp.jpg" style={{ width: "100%", marginTop: "-20%" }} />
                     </Box>
                     <Box pb={20} pt={10} color="white" px={4} maxWidth={1280} mx="auto">
                         <Box display="flex" gap={4} justifyContent="center" flexWrap="wrap">
@@ -166,7 +166,7 @@ export default function LandingPage() {
                     </Box>
                 </Box>
             </Box>
-            <Box component="footer" bgcolor="primary.main" p={4}>
+            {/* <Box component="footer" bgcolor="primary.main" p={4}>
                 <Box
                     display="flex"
                     gap={4}
@@ -174,14 +174,50 @@ export default function LandingPage() {
                     alignItems="center"
                     flexWrap="wrap"
                 >
-                    {/* <Typography color="white" fontSize={20}>
-            Made with
-          </Typography> */}
-                    <img src="/refine-logo.svg" width={100} />
+                    <Typography color="white" fontSize={20}>
+            Made with </Typography>
                     <img src="/supabase-logo.svg" width={150} />
                     <img src="/material-ui-logo.svg" width={44} />
+                    <img src="/refine-logo.svg" width={100} />
+
+                    <Typography color="white" fontSize={20}>
+            Made during </Typography>
+                    <img src="/mh_logo.png" width={150} />
+                    <Typography color="white" fontSize={20}>
+            Thanks To Organiser </Typography>
+                    <img src="/mim_logo_left.png" width={100} />
+                    <img src="/team_logo_left.png" width={90} />
                 </Box>
-            </Box>
+            </Box> */}
+
+<Box component="footer" bgcolor="primary.main" p={4}>
+    <Box
+        display="flex"
+        gap={40}
+        justifyContent="center"
+        alignItems="center"
+        flexWrap="wrap"
+    >
+        <Box display="flex" flexDirection="column" alignItems="right">
+            <Typography color="white" fontSize={20}>Made with</Typography>
+            <img src="/supabase-logo.svg" width={150} />
+            <img src="/material-ui-logo.svg" width={44} />
+            <img src="/refine-logo.svg" width={100} />
+        </Box>
+
+        <Box display="flex" flexDirection="column" alignItems="center">
+            <Typography color="white" fontSize={20}>Made during</Typography>
+            <img src="/mh_logo.png" width={150} />
+        </Box>
+
+        <Box display="flex" flexDirection="column" alignItems="left">
+            <Typography color="white" fontSize={20}>Thanks To Organiser</Typography>
+            <img src="/mim_logo_left.png" width={150} />
+            <img src="/team_logo_left.png" width={90} />
+        </Box>
+    </Box>
+</Box>
         </Stack>
+        
     );
 }

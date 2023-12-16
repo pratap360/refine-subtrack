@@ -119,9 +119,14 @@ export default function SignIn() {
             >
               Sign Up
             </Button>
-           
           </Box>
+
+          <Typography variant="body2" color="text.secondary" align="center">
+          Already have an account? 
+          </Typography>
+            <Link href="/login">Log In</Link>
         </Box>
+        
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
   );
