@@ -135,7 +135,7 @@ export default function LandingPage() {
                                 </Button>
                             ) : (
                                 <Button variant="contained" component={Link} to="/requests">
-                                    Start Creating
+                                    Get Started.
                                 </Button>
                             )}
                         </Box>
