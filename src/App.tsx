@@ -21,7 +21,7 @@ import Dashboard from "pages/dashboard";
 import Login from "Login";
 import ForgotPwd from "forgotpwd";
 import { ThemeProvider } from "@emotion/react";
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import { deepPurple } from "@mui/material/colors";
 
 
@@ -84,7 +84,6 @@ function App() {
               <Routes>
               <Route path="/forgotpassword" element={<ForgotPwd/>} />
               </Routes>
-       
 
               {/* Dashboard  */}
               <Routes>

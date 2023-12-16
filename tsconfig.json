@@ -1,5 +1,7 @@
 {
-  "compilerOptions": {
+  "compilerOptions": 
+  {
+    "types": ["bonjour"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -20,5 +22,5 @@
       "*": ["./*"]
     }
   },
-  "include": ["src"]
+  "include":["src", "node_modules/@mui/material"]
 }
