@@ -9,6 +9,7 @@ import routerBindings, {
   DocumentTitleHandler,
   UnsavedChangesNotifier,
 } from "@refinedev/react-router-v6";
+import customTitleHandler from "./utility/customTitleHandler";
 import { dataProvider, liveProvider } from "@refinedev/supabase";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { supabaseClient } from "utility";
@@ -98,7 +99,7 @@ function App() {
 
               <RefineKbar />
               <UnsavedChangesNotifier />
-              <DocumentTitleHandler />
+              <DocumentTitleHandler handler={customTitleHandler} />
             </Refine>
           </RefineSnackbarProvider>
         </ColorModeContextProvider>

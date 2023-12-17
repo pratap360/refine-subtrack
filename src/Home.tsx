@@ -19,12 +19,14 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-// import { AppIcon } from "../../components/app-icon";
+import { AppIcon } from "../src/components/app-icon";
 import { Link } from "react-router-dom";
-import EqualizerIcon from "@mui/icons-material/Equalizer";
-import QrCode2Icon from "@mui/icons-material/QrCode2";
+
+// icons 
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
-import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+
 import { useGetIdentity } from "@refinedev/core";
 import { IUser } from "../src/components/header";
 
@@ -68,7 +70,7 @@ export default function LandingPage() {
                 display="flex"
                 justifyContent="space-between"
             >
-                {/* <AppIcon /> */}
+                <AppIcon />
                 <Stack direction="row" gap={2}>
                     {user ? (
                         <Button
@@ -148,19 +150,20 @@ export default function LandingPage() {
                     <Box pb={20} pt={10} color="white" px={4} maxWidth={1280} mx="auto">
                         <Box display="flex" gap={4} justifyContent="center" flexWrap="wrap">
                             <Feature
-                                title="Customizable RSVP Cards"
-                                description="Simple customizable options to quickly create RSVP cards and still make it unique."
+                                title="Customizable  Cards"
+                                description="Simple customizable options to quickly create Subcribtion Tracker cards 
+                                and still make it unique with amazing colors."
                                 icon={<DashboardCustomizeIcon fontSize="inherit" />}
                             />
                             <Feature
-                                title="Gauge Guest Demographic"
-                                description="Attach questions to ask your guests to determine your demographic. Example: how many of your guests are vegan?"
-                                icon={<QuestionMarkIcon fontSize="inherit" />}
+                                title="Reports Exports"
+                                description="Get customize reports according to your subscription. *Based on input data. "
+                                icon={<AssessmentIcon fontSize="inherit" />}
                             />
                             <Feature
-                                title="Invitations Via QR Codes"
-                                description="Spread your invitations through portable QR Codes. Copy them as images and send."
-                                icon={<QrCode2Icon fontSize="inherit" />}
+                                title="Personalized notifications "
+                                description="Get Personalized notifications to remind your subscriptions."
+                                icon={<NotificationsActiveIcon fontSize="inherit" />}
                             />
                         </Box>
                     </Box>
