@@ -136,16 +136,19 @@ export default function LandingPage() {
                                     Dashboard
                                 </Button>
                             ) : (
-                                <Button variant="contained" component={Link} to="/login">
+                                <Button variant="contained" component="a" href="https://cdpn.io/cpe/boomboom/index.html?key=index.html-25a3a294-3d2a-1241-fc43-992103cf758a#">
                                     Get Started.
                                 </Button>
+                                // <Button variant="contained" component={Link} to="/dashboard">
+                                //     Get Started.
+                                // </Button>
                             )}
                         </Box>
                     </Box>
                 </Box>
                 <Box bgcolor="primary.main">
                     <Box px={{ xs: 2, md: 10 }} maxWidth={1280} mx="auto">
-                        <img src="/ss_hp.jpg" style={{ width: "100%", marginTop: "-20%" }} />
+                        <img src="/ss_dash.png" style={{ width: "100%", marginTop: "-20%" }} />
                     </Box>
                     <Box pb={20} pt={10} color="white" px={4} maxWidth={1280} mx="auto">
                         <Box display="flex" gap={4} justifyContent="center" flexWrap="wrap">
